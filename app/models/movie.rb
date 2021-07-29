@@ -13,4 +13,8 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
+
+  def director
+    return Director.where({ :id => self.director_id })[0].name
+  end
 end

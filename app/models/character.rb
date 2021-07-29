@@ -10,4 +10,11 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
+
+  def movie
+
+    return Movie.all.where({ :id => self.movie_id })[0]
+
+  end
+
 end
